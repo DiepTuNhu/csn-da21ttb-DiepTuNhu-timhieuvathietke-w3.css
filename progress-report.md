@@ -13,3 +13,9 @@
 - Viết báo cáo chương nghiên cứu lý thuyết (thư viện W3.CSS, ngôn ngữ PHP và ngôn ngữ truy vấn dữ liệu).
 - Cài đặt cơ sở dữ liệu
 - Cài đặt các chức năng thêm, xóa, sửa dữ liệu
+
+## Tuần 3: Từ 04/12/2023 đến 10/12/2023
+
+- Thiết kế giao diện giới thiệu sản phẩm
+- Cài đặt chức năng hiển thị và tìm kiếm sản phẩm
+- Viết báo cáo chương 3, 4
