@@ -19,3 +19,8 @@
 - Thiết kế giao diện giới thiệu sản phẩm
 - Cài đặt chức năng hiển thị và tìm kiếm sản phẩm
 - Viết báo cáo chương 3, 4
+
+## Tuần 4: Từ 18/12/2023 đến 24/12/2023
+
+- Hoàn chỉnh các chức năng của hệ thống
+- Viết báo cáo chương 5.
