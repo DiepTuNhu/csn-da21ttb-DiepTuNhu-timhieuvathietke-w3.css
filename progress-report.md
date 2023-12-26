@@ -24,3 +24,9 @@
 
 - Hoàn chỉnh các chức năng của hệ thống
 - Viết báo cáo chương 5.
+
+## Tuần 5: Từ 25/12/2023 đến 31/12/2023
+
+- Hoàn chỉnh quyển báo cáo
+- Hoàn chỉnh tập tin trình chiếu
+- Hoàn thành sản phẩm
