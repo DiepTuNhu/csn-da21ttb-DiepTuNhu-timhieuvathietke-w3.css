@@ -16,22 +16,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 .two-line-limit {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all 0.5s ease-in-out; /* Thêm hiệu ứng chuyển động */
+   /* Thêm hiệu ứng chuyển động */
 }
 
-.two-line-limit:hover {
+.w3-quarter:hover {
   /* -webkit-line-clamp: unset; Gỡ bỏ giới hạn khi hover */
   transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
 }
 
 h1{
   font-family: 'Merienda', cursive;
 }
-.two-line-limit a{
+.w3-quarter a{
   text-decoration: none;
 }
 #search {
@@ -78,12 +79,15 @@ align-items: center;
  <!-- SEARCH ---------------------------------------------------------------------------------------------------------------------- -->
   <div class="w3-container w3-row w3-margin-bottom">
     <div id="search">
-      <div class="w3-col" style="width: 58px">
+      <form action="xuly_timkiem.php" method="post">
+      <!-- <div class="w3-col" style="width: 58px">
         <i class="w3-xlarge fa fa-search w3-button w3-round-xxlarge w3-hover-green"></i>
-      </div>
+      </div> -->
+      <input type="submit" name="nuttimkiem" value="Tìm kiếm">
       <div class="w3-rest">
-        <input class="w3-input w3-border w3-round-xxlarge w3-hover-border-green" name="first" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
+        <input class="w3-input w3-border w3-round-xxlarge w3-hover-border-green" name="timkiem" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
       </div>
+      </form>  
     </div>
   </div>
  <!-- SLIDER ---------------------------------------------------------------------------------------------------------------------- -->

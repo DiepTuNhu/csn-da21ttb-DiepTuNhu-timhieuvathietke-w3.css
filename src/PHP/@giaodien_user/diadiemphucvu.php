@@ -28,11 +28,11 @@
             echo '<div class="w3-row-padding " >';
             
             while ($row = $result->fetch_assoc()) {
-              echo '<div class="w3-quarter two-line-limit" style="margin-bottom: 50px;">';
+              echo '<div class="w3-quarter" style="margin-bottom: 50px;">';
               echo '<div class="w3-card w3-white">';
               echo '<img src="../../images/' . $row['hinh_anh'] . '" alt="' . $row['ten_quan'] . '" style="width:100%">';
               echo '<h4 class = "w3-center" style = "font-weight:bolder;">' . $row['ten_quan'] . '</h4>';
-              echo '<p class ="w3-justify" style="padding:0px 10px 0px 10px;">' . $row['gioi_thieu_chung'] . '</p>';
+              echo '<p class ="w3-justify two-line-limit" style="padding:0px 10px 0px 10px;">' . $row['gioi_thieu_chung'] . '</p>';
               echo '</div>';
               echo '</div>';
             }           

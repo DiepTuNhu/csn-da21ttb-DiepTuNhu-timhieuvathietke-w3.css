@@ -47,12 +47,12 @@
             echo '<div class="w3-row-padding " >';
             
             while ($row = $result->fetch_assoc()) {
-              echo '<div class="w3-quarter two-line-limit" style="margin-bottom: 50px;">';
+              echo '<div class="w3-quarter" style="margin-bottom: 50px;">';
               echo '<div class="w3-card">';
               echo '<a href="chitiet.php?idmonan='.$row["id"].'">';
               echo '<img src="../../images/' . $row['hinh_anh'] . '" alt="' . $row['ten_mon_an'] . '" style="width:100%">';
               echo '<h4 class = "w3-center" style = "font-weight:bolder;">' . $row['ten_mon_an'] . '</h4>';
-              echo '<p class ="w3-justify" >' . $row['mo_ta'] . '</p>';
+              echo '<p class ="w3-justify two-line-limit" style="padding:0px 10px 0px 10px;">' . $row['mo_ta'] . '</p>';
               echo '</a>';
               echo '</div>';
               echo '</div>';
