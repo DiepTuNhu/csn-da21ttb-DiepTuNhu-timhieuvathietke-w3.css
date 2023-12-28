@@ -94,5 +94,6 @@ if ($result->num_rows > 0) {
    
     <button name = "sbCapNhat" type="submit" class="btn btn-primary">Cập nhật</button>
   </form>
+  <script>CKEDITOR.replace("mota");</script>
 </div>
 <br>

@@ -23,7 +23,7 @@
    /* Thêm hiệu ứng chuyển động */
 }
 
-.w3-quarter:hover {
+.card_monan:hover {
   /* -webkit-line-clamp: unset; Gỡ bỏ giới hạn khi hover */
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
@@ -32,7 +32,7 @@
 h1{
   font-family: 'Merienda', cursive;
 }
-.w3-quarter a{
+.card_monan a{
   text-decoration: none;
 }
 #search {
@@ -40,14 +40,17 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
+.search {
+  display: flex;
+  align-items: center;
+}
 </style>
 
 </head>
 <body>
 <div class="w3-top">
 <div class="w3-bar w3-theme-d5">
-  <a href="danhsachmonan.php" class="w3-bar-item w3-button w3-mobile">Trang chủ</a>
+  <a href="index.php" class="w3-bar-item w3-button w3-mobile">Trang chủ</a>
   <a href="gioithieu.php" class="w3-bar-item w3-button w3-mobile">Giới thiệu</a>
   <div class="w3-dropdown-hover w3-mobile">
     <button class="w3-button">Món ăn <i class="fa fa-caret-down"></i></button>
@@ -81,12 +84,18 @@ align-items: center;
     <div id="search">
       <form action="xuly_timkiem.php" method="post">
       <!-- <div class="w3-col" style="width: 58px">
-        <i class="w3-xlarge fa fa-search w3-button w3-round-xxlarge w3-hover-green"></i>
-      </div> -->
-      <input type="submit" name="nuttimkiem" value="Tìm kiếm">
-      <div class="w3-rest">
-        <input class="w3-input w3-border w3-round-xxlarge w3-hover-border-green" name="timkiem" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
+        <i class="w3-xlarge fa fa-search w3-button w3-round-xxlarge w3-hover-green" name="nuttimkiem"></i>
       </div>
+      <input type="submit" name="nuttimkiem" value="Tìm kiếm"> -->
+      <div class="w3-container w3-row search">
+        <div class="w3-rest">
+          <input class="w3-input w3-border w3-round-xxlarge w3-hover-border-green" name="timkiem" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
+        </div>
+        <button type="submit" name="nuttimkiem" class="w3-button w3-round-xxlarge w3-hover-green">
+          <i class="w3-xlarge fa fa-search"></i>
+        </button>
+      </div>
+      
       </form>  
     </div>
   </div>

@@ -51,4 +51,5 @@
     </div>
     <button type="submit" class="btn btn-primary" name = "sbThem">Thêm mới</button>
   </form>
+  <script>CKEDITOR.replace("gioithieu");</script>
 </div>

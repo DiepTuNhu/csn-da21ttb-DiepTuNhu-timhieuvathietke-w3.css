@@ -40,7 +40,7 @@
   </div>
 
 <div class="w3-row w3-theme-d5">
-  <div class="w3-col s2 w3-theme-d5 w3-center">
+  <div class="w3-col s3 w3-theme-d5 w3-center">
     <img src="../../images/NTN.png" alt="" style="width: 100%">
   </div>
   <div class="w3-col s4 ">
@@ -49,28 +49,32 @@
 
     $rs = $conn->query($sql1);
     if ($rs->num_rows > 0) {
-      echo '<h2>Danh mục món ăn</h2>';       
+      echo '<h4>Danh mục món ăn</h4>';       
       while ($r = $rs->fetch_assoc()) {
         echo '<div class="w3-panel w3-xxlarge w3-serif">';
         echo '<ul style="font-size:15px">';
-        echo '<li>'. $r["ten_danh_muc"].'</li>';
+        echo '<li>';
+        echo '<a style="text-decoration:none" href="monan.php?madm='.$r["id"].'" >'. $r["ten_danh_muc"].'</a>';
+        echo '</li>';
         echo '</ul>';
         echo '</div>';
       }
     }
     ?>
   </div>
-  <div class="w3-col s6">
+  <div class="w3-col s5">
   <?php
-    $sql1 = "SELECT * FROM diem_phuc_vu";
+    $sql1 = "SELECT * FROM diem_phuc_vu ORDER BY diem_phuc_vu.ten_quan DESC LIMIT 4" ;
 
     $rs = $conn->query($sql1);
     if ($rs->num_rows > 0) {
-      echo '<h2>Địa điểm phục vụ</h2>';       
+      echo '<h4>Địa điểm phục vụ</h4>';       
       while ($r = $rs->fetch_assoc()) {
         echo '<div class="w3-panel w3-xxlarge w3-serif">';
         echo '<ul style="font-size:15px">';
-        echo '<li>'. $r["ten_quan"].'</li>';
+        echo '<li>';
+        echo '<a style="text-decoration:none" href="chitiet_diadiem.php?iddiadiem='.$r["id"].'" >'. $r["ten_quan"].'</a>';
+        echo '</li>';
         echo '</ul>';
         echo '</div>';
       }

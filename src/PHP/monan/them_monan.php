@@ -1,5 +1,4 @@
 <?php
-
 //Kết nối csdl
 include_once("../connect.php");
 
@@ -15,7 +14,7 @@ if(isset($_POST["tenmon"])&&isset($_POST["gia"])&&isset($_POST["mota"])&&isset($
 
 //Viết câu truy vấn
 $sql = "INSERT INTO mon_an (ten_mon_an, gia_ban, mo_ta, danh_muc_id)
-VALUES ('$tenmon', '$gia', '$mota', $danhmuc)";
+VALUES ('$tenmon', '$gia', '$mota', '$danhmuc')";
 
 //Thực thi câu truy vấn - Kiểm tra và hiển thị kết quả
 if ($conn->query($sql) === TRUE) {

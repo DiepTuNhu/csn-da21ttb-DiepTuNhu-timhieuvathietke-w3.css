@@ -26,84 +26,91 @@ if ($result->num_rows > 0) {
  if(isset($_POST["sbCapNhat"]))
  {
  //Lấy biến từ form
-   $maquan = $tenquan = $tenmon = $gioithieu = $diachi = $giomo = $giodong = $tenhinhanh= "";
-   if(isset($_FILES["fileToUpload"]["name"])&&isset($_POST["tenquan"])&&isset($_POST["monan"])&&isset($_POST["gioithieu"])&&isset($_POST["diachi"])&&isset($_POST["giomo"])&&isset($_POST["giodong"]))
-  {
-    $maquan = $_POST["id"];
-    $tenquan = $_POST["tenquan"];
-    $tenmon = $_POST["monan"];
-    $gioithieu = $_POST["gioithieu"];   
-    $diachi = $_POST["diachi"];
-    $giomo = $_POST["giomo"];
-    $giodong = $_POST["giodong"];
-    $tenhinhanh = $_FILES["fileToUpload"]["name"];
-  }
-//Upload file
-$target_dir = "../../images/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $maquan = $tenquan = $tenmon = $gioithieu = $diachi = $giomo = $giodong = $tenhinhanh= "";
+    if(isset($_FILES["fileToUpload"]["name"])&&isset($_POST["tenquan"])&&isset($_POST["monan"])&&isset($_POST["gioithieu"])&&isset($_POST["diachi"])&&isset($_POST["giomo"])&&isset($_POST["giodong"]))
+    {
+      $maquan = $_POST["id"];
+      $tenquan = $_POST["tenquan"];
+      $tenmon = $_POST["monan"];
+      $gioithieu = $_POST["gioithieu"];   
+      $diachi = $_POST["diachi"];
+      $giomo = $_POST["giomo"];
+      $giodong = $_POST["giodong"];
+      $tenhinhanh = $_FILES["fileToUpload"]["name"];
+    }
+    //Upload file
+    $target_dir = "../../images/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+          
+    // Kiểm tra file ảnh là ảnh thật hay ảnh giả
        
-// Kiểm tra file ảnh là ảnh thật hay ảnh giả
-       
-$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-if($check !== false) {
-  echo "File is an image - " . $check["mime"] . ".";
-  $uploadOk = 1;
-} 
-else {
-  echo "File is not an image.";
-  $uploadOk = 0;
-}
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+      echo "File is an image - " . $check["mime"] . ".";
+      $uploadOk = 1;
+    } 
+    else {
+      echo "File is not an image.";
+      $uploadOk = 0;
+    }
       
-echo $target_file."--".$_FILES["fileToUpload"]["tmp_name"];
-// Kiểm tra xem tập tin đã tồn tại chưa
-if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
-  $uploadOk = 0;
-}
+    echo $target_file."--".$_FILES["fileToUpload"]["tmp_name"];
+    // Kiểm tra xem tập tin đã tồn tại chưa
+    if (file_exists($target_file)) {
+      echo "Sorry, file already exists.";
+      $uploadOk = 0;
+    }
 
-// Kiểm tra kích thước tập tin
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-  echo "Sorry, your file is too large.";
-  $uploadOk = 0;  
-}
+    // Kiểm tra kích thước tập tin
+    if ($_FILES["fileToUpload"]["size"] > 500000) {
+      echo "Sorry, your file is too large.";
+      $uploadOk = 0;  
+    }
 
-// Cho phép một số định dạng tệp nhất định
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-  $uploadOk = 0;
-}
+    // Cho phép một số định dạng tệp nhất định
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+      echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+      $uploadOk = 0;
+    }
 
-// Check if $upload Ok is set to 0 by an error
-if ($uploadOk == 0) {
-  echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} 
-else 
-  {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+    // Check if $upload Ok is set to 0 by an error
+    if ($uploadOk == 0) {
+      echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
     } 
     else 
     {
-      echo "Sorry, there was an error uploading your file.";
+      if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+      } 
+      else 
+      {
+        echo "Sorry, there was an error uploading your file.";
+      }
     }
-  }
 
-  //Viết câu truy vấn cập nhật
-  $sql = "UPDATE diem_phuc_vu SET ten_quan ='$tenquan', mon_an_id ='$tenmon', gioi_thieu_chung = '$gioithieu', dia_chi_quan = '$diachi', gio_mo_cua = '$giomo', gio_dong_cua = '$giodong' hinh_anh = '$tenhinhanh' WHERE id='$maquan'";
-  if ($conn->query($sql) === TRUE) {
-    header("Location:diemphucvu.php");
-  } else {
-  echo "Error updating record: " . $conn->error;
-  }
+    //Viết câu truy vấn cập nhật
+    if(isset($_FILES["fileToUpload"]["name"])&&!empty($_FILES["fileToUpload"]["name"]))
+    {
+      $sql = "UPDATE diem_phuc_vu SET ten_quan ='$tenquan', mon_an_id ='$tenmon', gioi_thieu_chung = '$gioithieu', dia_chi_quan = '$diachi', gio_mo_cua = '$giomo', gio_dong_cua = '$giodong', hinh_anh = '$tenhinhanh' WHERE id='$maquan'";
+    }
+    else{
+      $sql = "UPDATE diem_phuc_vu SET ten_quan ='$tenquan', mon_an_id ='$tenmon', gioi_thieu_chung = '$gioithieu', dia_chi_quan = '$diachi', gio_mo_cua = '$giomo', gio_dong_cua = '$giodong' WHERE id='$maquan'";
+    }
+ 
+    if ($conn->query($sql) === TRUE) {
+      header("Location:diemphucvu.php");
+    } else {
+    echo "Error updating record: " . $conn->error;
+    }
   } 
  
 ?>
 <div class="container">
   <h2 class="w3-center w3-padding-16">Cập nhật điểm phục vụ</h2>
-  <form action="sua_diemphucvu.php" method = "post">
+  <form action="sua_diemphucvu.php" method = "post" enctype="multipart/form-data">
   <div class="mb-3 mt-3">
       <label for="id">Mã điểm phục vụ:</label>
       <input value = "<?php echo $maquan_val;?>" readonly type="text" class="form-control" id="id" placeholder="" name="id">
@@ -160,4 +167,5 @@ else
     </div>   
     <button name = "sbCapNhat" type="submit" class="btn btn-primary">Cập nhật</button>
   </form>
+  <script>CKEDITOR.replace("gioithieu");</script>
 </div>
