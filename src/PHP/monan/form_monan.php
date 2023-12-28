@@ -20,9 +20,6 @@
       <textarea class="form-control" id="mota" cols = "300" rows = "5" name="mota" required></textarea>
     </div>
 
-   
-    
-
     <div class="mb-3 mt-3">
       <label for="danhmuc">Danh mục:</label>
       <select type="text" class="form-control" id="danhmuc" name="danhmuc">

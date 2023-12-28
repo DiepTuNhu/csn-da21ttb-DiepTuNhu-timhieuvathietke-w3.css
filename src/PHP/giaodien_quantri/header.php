@@ -1,14 +1,6 @@
 <?php
      include_once("../connect.php");
 ?>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
-
-  body a{
-    font-family: 'Denk One', sans-serif;
-    font-size: 16px;
-  }
-</style>
 
 <!DOCTYPE html>
 <html>
@@ -19,6 +11,15 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
+
+  body a{
+    font-family: 'Denk One', sans-serif;
+    font-size: 16px;
+  }
+</style>
 <body>
   <div class="w3-sidebar w3-bar-block w3-collapse w3-card-4 w3-blue" style="width:200px;" id="mySidebar">
     <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>

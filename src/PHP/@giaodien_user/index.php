@@ -26,13 +26,15 @@
             echo '<div class="w3-row-padding">';            
             while ($row = $result->fetch_assoc()) {
               echo '<div class="w3-quarter card_monan" style="margin-bottom: 50px;">';
-              echo '<div class="w3-card w3-white">';
               echo '<a href="chitiet.php?idmonan='.$row["id"].'">';
+              echo '<div class="w3-card-4 w3-white two-line-limit">';
               echo '<img src="../../images/' . $row['hinh_anh'] . '" alt="' . $row['ten_mon_an'] . '" style="width:100%">';
+              echo '<div class="w3-container w3-justify">';
               echo '<h4 class = "w3-center" style = "font-weight:bolder;">' . $row['ten_mon_an'] . '</h4>';
-              echo '<p class ="w3-justify two-line-limit" style="padding:0px 10px 0px 10px;">' . $row['mo_ta'] . '</p>';
-              echo '</a>';
+              echo '<p class ="w3-justify">' . $row['mo_ta'] . '</p>';
               echo '</div>';
+              echo '</div>';
+              echo '</a>';
               echo '</div>';
             }           
             echo '</div>';

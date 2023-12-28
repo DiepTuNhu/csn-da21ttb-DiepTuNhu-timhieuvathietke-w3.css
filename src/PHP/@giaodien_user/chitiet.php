@@ -36,11 +36,10 @@ if(isset($_GET["idmonan"]))
                 <div class="w3-panel w3-left w3-padding-16" >
                 <h3 class="w3-left" style="font-weight: bolder; line-height:1.5" >Những nguyên liệu chính:</h3>
                   <ul type = "square">
+                    
                     <?php
-                  while ($row1 = $result->fetch_assoc()) {                    
-                    
-                    echo '<li >'.$row1["ten_nguyen_lieu"].'</li>';
-                    
+                  while ($row1 = $result->fetch_assoc()) {                                        
+                    echo '<li>'.$row1["ten_nguyen_lieu"].'</li>';                    
                   }
                   ?>
                   
@@ -60,12 +59,11 @@ if(isset($_GET["idmonan"]))
         } else {
           echo "0 results";
         }
-     
-
+        
       $sql1 = "SELECT *
         FROM diem_phuc_vu
         WHERE mon_an_id = '".$mamonan."'";
-        //echo $sql;
+       //echo $sql; 
         $result = $conn->query($sql1);
         ?>
         <div class="w3-panel w3-leftbar w3-border-green  w3-xxlarge w3-serif">

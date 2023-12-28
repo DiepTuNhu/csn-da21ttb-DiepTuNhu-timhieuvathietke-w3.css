@@ -2,7 +2,7 @@
     include_once("../giaodien_quantri/header.php");
 ?>
 <!-- Nội dung trang -->
-<div class="container">
+<div class="w3-container">
   <h2  class="w3-center w3-padding-16">Quản lý danh mục món ăn</h2>
 
   <a href = "form_danhmuc.php" class="btn btn-primary">Thêm mới</a><br>
@@ -22,8 +22,7 @@
             </tr>";
       while($row = $result->fetch_assoc()) {
         echo "<tr>
-                <td>". $row["ten_danh_muc"]."</td>";
-        
+                <td>". $row["ten_danh_muc"]."</td>";       
         echo"<td>";
         ?>
           <a class = "btn btn-primary" href = "sua_danhmuc.php?&ma=<?php echo $row["id"];?>">Sửa</a>

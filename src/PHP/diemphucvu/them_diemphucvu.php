@@ -15,12 +15,6 @@ if (isset($_POST["sbThem"])) {
     $diachi = $_POST["diachi"];
     $tenhinhanh = $_FILES["fileToUpload"]["name"];
 }
-// //Lây giá trị từ form
-// $ten = "";
-// if(isset($_POST["sbThem"])) 
-// {
-//   $ten = $_FILES["fileToUpload"]["name"];
-// }
 
 // Upload file
 $target_dir = "../../images/";

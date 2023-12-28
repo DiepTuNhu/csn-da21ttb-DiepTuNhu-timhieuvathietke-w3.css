@@ -16,45 +16,6 @@ if ($result->num_rows > 0) {
    }
 }
 ?>
-
-<div class="container">
-  <h2 class="w3-center w3-padding-16">Cập nhật hình ảnh món ăn</h2>
-  <form action="sua_hinhanh.php" method = "post" enctype="multipart/form-data">
-  <div class="mb-3 mt-3">
-      <label for="id">Mã hình ảnh:</label>
-      <input value = "<?php echo $ma_val;?>" readonly type="text" class="form-control" id="id" placeholder="" name="id">
-    </div>  
-    <div class="mb-3 mt-3">
-            <label for="monan">Tên món ăn:</label>
-            <select type="text" class="form-control" id="monan" name="monan">
-                <?php
-                $sql = "SELECT * FROM mon_an";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        if ($idmonan_val == $row["id"]) {
-                            echo "<option selected value='" . $row["id"] . "'>" . $row["ten_mon_an"] . " </option>";
-                        } else {
-                            echo "<option value='" . $row["id"] . "'>" . $row["ten_mon_an"] . " </option>";
-                        }
-                    }
-                } else {
-                    echo "0 results";
-                }
-                ?>
-            </select>
-        </div>
-   
-    <div class="mb-3 mt-3">
-      <label for="tenanh">Chọn ảnh:</label>
-      <input type="file" value="Upload Image" name="fileToUpload">
-    </div>
-  
-    <button name = "sbCapNhat" type="submit" class="btn btn-primary">Cập nhật</button>
-  </form>
-</div><br>
-
 <?php
  if(isset($_POST["sbCapNhat"]))
  {
@@ -121,12 +82,55 @@ if ($result->num_rows > 0) {
     }
 
   //Viết câu truy vấn cập nhật
-  $sql = "UPDATE hinh_anh SET hinh_anh ='$ten', mon_an_id = '$monan' WHERE id='$ma'";
-
-  if ($conn->query($sql) === TRUE) {
-    header("Location:hinhanh.php");
-  } else {
-    echo "Error updating record: " . $conn->error;
+  if(isset($_FILES["fileToUpload"]["name"])&&!empty($_FILES["fileToUpload"]["name"]))
+  {
+    $sql = "UPDATE hinh_anh SET hinh_anh ='$ten', mon_an_id = '$monan' WHERE id='$ma'";
+  }else{
+    $sql = "UPDATE hinh_anh SET mon_an_id = '$monan' WHERE id='$ma'";
   }
-}
+    if ($conn->query($sql) === TRUE) {
+      header("Location:hinhanh.php");
+    } else {
+      echo "Error updating record: " . $conn->error;
+    }
+} 
+
 ?>
+<div class="container">
+  <h2 class="w3-center w3-padding-16">Cập nhật hình ảnh món ăn</h2>
+  <form action="sua_hinhanh.php" method = "post" enctype="multipart/form-data">
+  <div class="mb-3 mt-3">
+      <label for="id">Mã hình ảnh:</label>
+      <input value = "<?php echo $ma_val;?>" readonly type="text" class="form-control" id="id" placeholder="" name="id">
+    </div>  
+    <div class="mb-3 mt-3">
+            <label for="monan">Tên món ăn:</label>
+            <select type="text" class="form-control" id="monan" name="monan">
+                <?php
+                $sql = "SELECT * FROM mon_an";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        if ($idmonan_val == $row["id"]) {
+                            echo "<option selected value='" . $row["id"] . "'>" . $row["ten_mon_an"] . " </option>";
+                        } else {
+                            echo "<option value='" . $row["id"] . "'>" . $row["ten_mon_an"] . " </option>";
+                        }
+                    }
+                } else {
+                    echo "0 results";
+                }
+                ?>
+            </select>
+        </div>
+   
+    <div class="mb-3 mt-3">
+      <label for="tenanh">Chọn ảnh:</label>
+      <input type="file" value="Upload Image" name="fileToUpload">
+    </div>
+  
+    <button name = "sbCapNhat" type="submit" class="btn btn-primary">Cập nhật</button>
+  </form>
+</div><br>
+
