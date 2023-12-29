@@ -1,7 +1,6 @@
 <?php
     include_once("../giaodien_quantri/header.php");
 ?>
-
 <div class="container">
   <h2 class="w3-center w3-padding-16">Thêm điểm phục vụ</h2>
   <form action="them_diemphucvu.php" method = "post" enctype="multipart/form-data">
@@ -19,18 +18,14 @@
         <?php
         $sql = "SELECT * FROM mon_an";
         $result = $conn->query($sql);
-
         if ($result->num_rows > 0) {
-          // output data of each row
           while($row = $result->fetch_assoc()) {
             echo "<option value='" . $row["id"]. "'>" . $row["ten_mon_an"]. " </option>";
           }
         } else {
           echo "0 results";
         }
-       
         ?>
-
       </select>
     </div>
     <div class="mb-3 mt-3">
@@ -48,6 +43,10 @@
     <div class="mb-3 mt-3">
       <label for="giodong">Giờ đóng cửa:</label>
       <input type="time" class="form-control" id="giodong" name="giodong" required>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="sdt">Số điện thoại:</label>
+      <input type="number" class="form-control" id="sdt" placeholder="Nhập số điện thoại" name="sdt" required>
     </div>
     <button type="submit" class="btn btn-primary" name = "sbThem">Thêm mới</button>
   </form>

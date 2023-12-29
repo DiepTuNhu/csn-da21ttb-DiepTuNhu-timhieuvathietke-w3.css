@@ -22,7 +22,6 @@
   #backToTopBtn.hidden {
     display: none;
   }
-
   #backToTopBtn {
     margin-bottom: 10px;
   }
@@ -31,57 +30,55 @@
     padding: 0;
   }
 </style>
-
 </div>
 <div id="btntop" class="w3-bottom">
-    <a href="#" id="backToTopBtn" class="w3-btn w3-round-large w3-border w3-theme-d5 w3-opacity w3-hover-opacity-off">
-      <div class="fas fa-arrow-up"></div>
-    </a>
-  </div>
-
+  <a href="#" id="backToTopBtn" class="w3-btn w3-round-large w3-border w3-theme-d5 w3-opacity w3-hover-opacity-off">
+    <div class="fas fa-arrow-up"></div>
+  </a>
+</div>
 <div class="w3-row w3-theme-d5">
   <div class="w3-col s3 w3-theme-d5 w3-center">
     <img src="../../images/NTN.png" alt="" style="width: 100%">
   </div>
   <div class="w3-col s4 ">
     <?php
-    $sql1 = "SELECT * FROM danh_muc_mon_an";
+      $sql1 = "SELECT * FROM danh_muc_mon_an";
 
-    $rs = $conn->query($sql1);
-    if ($rs->num_rows > 0) {
-      echo '<h4>Danh mục món ăn</h4>';       
-      while ($r = $rs->fetch_assoc()) {
-        echo '<div class="w3-panel w3-xxlarge w3-serif">';
-        echo '<ul style="font-size:15px">';
-        echo '<li>';
-        echo '<a style="text-decoration:none" href="monan.php?madm='.$r["id"].'" >'. $r["ten_danh_muc"].'</a>';
-        echo '</li>';
-        echo '</ul>';
-        echo '</div>';
+      $rs = $conn->query($sql1);
+      if ($rs->num_rows > 0) {
+        echo '<h4>Danh mục món ăn</h4>';       
+        while ($r = $rs->fetch_assoc()) {
+          echo '<div class="w3-panel w3-xxlarge w3-serif">';
+            echo '<ul style="font-size:15px">';
+              echo '<li>';
+                echo '<a style="text-decoration:none" href="monan.php?madm='.$r["id"].'" >'. $r["ten_danh_muc"].'</a>';
+              echo '</li>';
+            echo '</ul>';
+          echo '</div>';
+        }
       }
-    }
     ?>
   </div>
   <div class="w3-col s5">
-  <?php
-    $sql1 = "SELECT * FROM diem_phuc_vu ORDER BY diem_phuc_vu.ten_quan DESC LIMIT 4" ;
-
-    $rs = $conn->query($sql1);
-    if ($rs->num_rows > 0) {
-      echo '<h4>Địa điểm phục vụ</h4>';       
-      while ($r = $rs->fetch_assoc()) {
-        echo '<div class="w3-panel w3-xxlarge w3-serif">';
-        echo '<ul style="font-size:15px">';
-        echo '<li>';
-        echo '<a style="text-decoration:none" href="chitiet_diadiem.php?iddiadiem='.$r["id"].'" >'. $r["ten_quan"].'</a>';
-        echo '</li>';
-        echo '</ul>';
-        echo '</div>';
+    <?php
+      $sql1 = "SELECT * FROM diem_phuc_vu ORDER BY diem_phuc_vu.ten_quan DESC LIMIT 4" ;
+      $rs = $conn->query($sql1);
+      if ($rs->num_rows > 0) {
+        echo '<h4>Địa điểm phục vụ</h4>';       
+        while ($r = $rs->fetch_assoc()) {
+          echo '<div class="w3-panel w3-xxlarge w3-serif">';
+            echo '<ul style="font-size:15px">';
+              echo '<li>';
+                echo '<a style="text-decoration:none" href="chitiet_diadiem.php?iddiadiem='.$r["id"].'" >'. $r["ten_quan"].'</a>';
+              echo '</li>';
+            echo '</ul>';
+          echo '</div>';
+        }
       }
-    }
     ?>
   </div>
 </div>
+<div class="w3-container w3-center w3-theme-d5 w3-border-top">&copy;copyrighted 2023 design by Diep Tu Nhu</div>
 </body>
 </html>
 

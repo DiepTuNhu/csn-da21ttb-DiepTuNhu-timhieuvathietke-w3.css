@@ -1,6 +1,5 @@
 <?php
 // logout.php
-
 session_start();
 
 // Hủy toàn bộ session

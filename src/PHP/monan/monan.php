@@ -1,18 +1,14 @@
 <?php
     include_once("../giaodien_quantri/header.php");
 ?>
-<!-- Nội dung trang -->
 <div class="container">
   <h2 class="w3-center w3-padding-16">Quản lý món ăn</h2>
   <a href = "form_monan.php" class="btn btn-primary">Thêm mới</a><br>
   <?php
     include_once("../connect.php");
-
     $sql = "SELECT mn.id, ten_mon_an, ten_danh_muc, gia_ban FROM mon_an mn, danh_muc_mon_an dm WHERE mn.danh_muc_id = dm.id";
     $result = $conn->query($sql);
-
     if ($result->num_rows > 0) {
-      // output data of each row
       echo "<br><table class = 'table table-hover'>";
       echo "<tr class ='table-primary'>
               <th>Tên món ăn</th>
@@ -44,5 +40,3 @@
           }
           ?>       
       </div>
-      <?php
-?>

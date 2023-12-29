@@ -1,18 +1,14 @@
 <?php
     include_once("../giaodien_quantri/header.php");
 ?>
-<!-- Nội dung trang -->
 <div class="container">
   <h2 class="w3-center w3-padding-16">Quản lý tài khoản người dùng</h2>
   <a href = "form_nguoidung.php" class="btn btn-primary">Thêm mới</a><br>
   <?php
     include_once("../connect.php");
-
     $sql = "SELECT * FROM nguoi_dung";
     $result = $conn->query($sql);
-
     if ($result->num_rows > 0) {
-      // output data of each row
       echo "<br><table class = 'table table-hover'>";
       echo "<tr class ='table-primary'>
               <th>Tên đăng nhập</th>
@@ -22,7 +18,6 @@
               <th>Sửa</th>
               <th>Xóa</th>
             </tr>";
-
       while($row = $result->fetch_assoc()) {
         echo "<tr>
                 <td>". $row["ten_dang_nhap"]."</td>

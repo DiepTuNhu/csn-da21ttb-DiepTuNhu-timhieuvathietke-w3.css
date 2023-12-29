@@ -1,19 +1,14 @@
 <?php
     include_once("../giaodien_quantri/header.php");
 ?>
-<!-- Nội dung trang -->
 <div class="w3-container">
   <h2  class="w3-center w3-padding-16">Quản lý danh mục món ăn</h2>
-
   <a href = "form_danhmuc.php" class="btn btn-primary">Thêm mới</a><br>
   <?php
     include_once("../connect.php");
-
     $sql = "SELECT * FROM danh_muc_mon_an";
     $result = $conn->query($sql);
-
     if ($result->num_rows > 0) {
-      // output data of each row
       echo "<br><table class = 'table table-hover'>";
       echo "<tr class ='table-primary'>
               <th>Tên danh mục</th>
@@ -39,6 +34,5 @@
     } else {
       echo "0 results";
     }
-    ?>
-  
+    ?> 
 </div>
