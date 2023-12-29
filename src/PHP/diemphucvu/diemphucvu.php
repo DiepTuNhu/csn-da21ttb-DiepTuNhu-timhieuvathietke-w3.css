@@ -24,7 +24,7 @@
             while($row = $result->fetch_assoc()) {
               echo "<tr>
                       <td>". $row["ten_quan"]."</td>
-                      <td width='200px'><img width ='30%' height = '20%' src = '../../images/". $row["hinh_anh"]."'></td>
+                      <td width='300px'><img width ='30%' height = '20%' src = '../../images/". $row["hinh_anh"]."'></td>
                       <td>". $row["ten_mon_an"]."</td>
                       <td>". $row["dia_chi_quan"]."</td>
                       <td>". $row["gio_mo_cua"]."</td>

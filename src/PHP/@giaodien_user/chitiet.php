@@ -65,7 +65,7 @@
       <form action="xuly_timkiem.php" method="post">
         <div class="w3-container w3-row search">
           <div class="w3-rest">
-            <input class="w3-input w3-border w3-round-xxlarge w3-hover-border-green" name="timkiem" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
+            <input class="w3-input w3-border w3-round-large w3-hover-border-green" name="timkiem" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
           </div>
           <button type="submit" name="nuttimkiem" class="w3-button w3-round-xxlarge w3-hover-green">
             <i class="w3-xlarge fa fa-search"></i>
@@ -105,7 +105,7 @@ if(isset($_GET["idmonan"]))
               </div>
               <div class="w3-col s8">
                 <div class=" w3-left" style = "padding-left:30px;">
-                  <h3 style="font-weight: bolder; line-height:1.5">Những nguyên liệu chính:</h3>
+                  <h3 style="font-weight: bolder; line-height:1.5">Nguyên liệu chính:</h3>
                   <ul type = "square">    
                   <?php
                     $sqlNguyenLieu = "SELECT ten_nguyen_lieu FROM nguyen_lieu WHERE mon_an_id=$mamonan";

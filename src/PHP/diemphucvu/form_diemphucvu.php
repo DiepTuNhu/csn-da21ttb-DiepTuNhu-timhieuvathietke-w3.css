@@ -46,7 +46,7 @@
     </div>
     <div class="mb-3 mt-3">
       <label for="sdt">Số điện thoại:</label>
-      <input type="number" class="form-control" id="sdt" placeholder="Nhập số điện thoại" name="sdt" required>
+      <input type="text" class="form-control" id="sdt" placeholder="Nhập số điện thoại" name="sdt" pattern="[0-9]{10}" title="Vui lòng nhập đúng 10 chữ số">
     </div>
     <button type="submit" class="btn btn-primary" name = "sbThem">Thêm mới</button>
   </form>

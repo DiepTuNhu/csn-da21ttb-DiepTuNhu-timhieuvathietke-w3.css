@@ -78,7 +78,7 @@
       <form action="xuly_timkiem.php" method="post">
         <div class="w3-container w3-row search">
           <div class="w3-rest">
-            <input class="w3-input w3-border w3-round-xxlarge w3-hover-border-green" name="timkiem" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
+            <input class="w3-input w3-border w3-round-large w3-hover-border-green" name="timkiem" type="text" placeholder="Tìm kiếm" style="width: 500px"/>
           </div>
           <button type="submit" name="nuttimkiem" class="w3-button w3-round-xxlarge w3-hover-green">
             <i class="w3-xlarge fa fa-search"></i>

@@ -156,8 +156,8 @@ if ($result->num_rows > 0) {
     </div>  
     <div class="mb-3 mt-3">
       <label for="sdt">Số điện thoại:</label>
-      <input  value = "<?php echo $sdt_val;?>" type="text" class="form-control" id="sdt" placeholder="Nhập số điện thoại" name="sdt">
-    </div> 
+      <input value = "<?php echo $sdt_val;?>" type="text" class="form-control" id="sdt" placeholder="Nhập số điện thoại" name="sdt" pattern="[0-9]{10}" title="Vui lòng nhập đúng 10 chữ số">
+    </div>
     <button name = "sbCapNhat" type="submit" class="btn btn-primary">Cập nhật</button>
   </form>
   <script>CKEDITOR.replace("gioithieu");</script>
