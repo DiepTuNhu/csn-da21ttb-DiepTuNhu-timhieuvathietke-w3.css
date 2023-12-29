@@ -33,11 +33,11 @@
 </head>
 <body>
 <div class="w3-top">
-  <div class="w3-bar w3-theme-d5">
-    <a href="index.php" class="w3-bar-item w3-button w3-mobile">Trang chủ</a>
-    <a href="gioithieu.php" class="w3-bar-item w3-button w3-mobile">Giới thiệu</a>
+  <div class="w3-bar w3-theme-d5 w3-padding">
+    <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-round-large">Trang chủ</a>
+    <a href="gioithieu.php" class="w3-bar-item w3-button w3-mobile w3-round-large">Giới thiệu</a>
     <div class="w3-dropdown-hover w3-mobile">
-      <button class="w3-button">Món ăn <i class="fa fa-caret-down"></i></button>
+      <button class="w3-button w3-round-large">Món ăn <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
         <?php
           $sql1 = "SELECT * FROM danh_muc_mon_an";
@@ -52,11 +52,11 @@
         ?> 
       </div>
     </div>
-    <a href="diadiemphucvu.php" class="w3-bar-item w3-button w3-mobile">Địa điểm phục vụ</a>
-    <a href="../login.php" class="w3-bar-item w3-button w3-mobile w3-right">Đăng nhập</a>
+    <a href="diadiemphucvu.php" class="w3-bar-item w3-button w3-mobile w3-round-large">Địa điểm phục vụ</a>
+    <a href="../login.php" class="w3-bar-item w3-button w3-mobile w3-right w3-round-large">Đăng nhập</a>
   </div>
 </div>
-  <div class="w3-container w3-center" style="padding:50px 0px 20px 0px;">
+  <div class="w3-container w3-center" style="padding:80px 0px 20px 0px;">
     <h1>ĐẶC SẢN TRÀ VINH</h1>
   </div>
  <!-- SEARCH ---------------------------------------------------------------------------------------------------------------------- -->
@@ -100,12 +100,12 @@ if(isset($_GET["idmonan"]))
               <div class="w3-panel w3-leftbar w3-border-green  w3-xxlarge w3-serif">
                 <h2 class = "w3-left" style = "text-transform:uppercase; font-weight:bolder;"><?php echo $row['ten_mon_an'];?></h2>
               </div>
-              <div class="w3-col s3 w3-padding-16">
+              <div class="w3-col s4 w3-padding-16">
                 <img src="../../images/<?php echo $row['hinh_anh'];?>" alt="<?php echo $row['ten_mon_an'];?>" style="width:100%">
               </div>
-              <div class="w3-col s9 w3-panel">
-                <div class="w3-panel w3-left w3-padding-16" >
-                  <h3 class="w3-left" style="font-weight: bolder; line-height:1.5">Những nguyên liệu chính:</h3>
+              <div class="w3-col s8">
+                <div class=" w3-left" style = "padding-left:30px;">
+                  <h3 style="font-weight: bolder; line-height:1.5">Những nguyên liệu chính:</h3>
                   <ul type = "square">    
                   <?php
                     $sqlNguyenLieu = "SELECT ten_nguyen_lieu FROM nguyen_lieu WHERE mon_an_id=$mamonan";

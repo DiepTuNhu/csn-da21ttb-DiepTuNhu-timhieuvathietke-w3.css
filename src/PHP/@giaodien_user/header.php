@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
   .two-line-limit {
     display: -webkit-box;
     -webkit-line-clamp: 5;
@@ -43,11 +44,11 @@
 </head>
 <body>
 <div class="w3-top">
-  <div class="w3-bar w3-theme-d5">
-    <a href="index.php" class="w3-bar-item w3-button w3-mobile">Trang chủ</a>
-    <a href="gioithieu.php" class="w3-bar-item w3-button w3-mobile">Giới thiệu</a>
+  <div class="w3-bar w3-theme-d5 w3-padding" id = "menu">
+    <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-round-large">Trang chủ</a>
+    <a href="gioithieu.php" class="w3-bar-item w3-button w3-mobile w3-round-large">Giới thiệu</a>
     <div class="w3-dropdown-hover w3-mobile">
-      <button class="w3-button">Món ăn <i class="fa fa-caret-down"></i></button>
+      <button class="w3-button w3-round-large">Món ăn <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
         <?php
           $sql1 = "SELECT * FROM danh_muc_mon_an";
@@ -62,13 +63,13 @@
         ?> 
       </div>
     </div>
-    <a href="diadiemphucvu.php" class="w3-bar-item w3-button w3-mobile">Địa điểm phục vụ</a>
-    <a href="../login.php" class="w3-bar-item w3-button w3-mobile w3-right">Đăng nhập</a>
+    <a href="diadiemphucvu.php" class="w3-bar-item w3-button w3-mobile w3-round-large">Địa điểm phục vụ</a>
+    <a href="../login.php" class="w3-bar-item w3-button w3-mobile w3-right w3-round-large">Đăng nhập</a>
   </div>
 </div>
 
 <div class="w3-white">
-  <div class="w3-container w3-center" style="padding:50px 0px 20px 0px;">
+  <div class="w3-container w3-center" style="padding:80px 0px 20px 0px;">
     <h1>ĐẶC SẢN TRÀ VINH</h1>
   </div>
  <!-- SEARCH ---------------------------------------------------------------------------------------------------------------------- -->

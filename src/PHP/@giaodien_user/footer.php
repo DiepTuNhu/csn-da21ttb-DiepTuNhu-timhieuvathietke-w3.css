@@ -38,7 +38,7 @@
 </div>
 <div class="w3-row w3-theme-d5">
   <div class="w3-col s3 w3-theme-d5 w3-center">
-    <img src="../../images/NTN.png" alt="" style="width: 100%">
+    <a href="./index.php"><img src="../../images/NTN.png" alt="" style="width: 100%"></a>
   </div>
   <div class="w3-col s4 ">
     <?php
