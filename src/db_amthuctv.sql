@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 29, 2023 lúc 05:35 PM
+-- Thời gian đã tạo: Th12 30, 2023 lúc 03:18 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 7.4.33
 
@@ -90,7 +90,9 @@ INSERT INTO `diem_phuc_vu` (`id`, `ten_quan`, `gioi_thieu_chung`, `dia_chi_quan`
 (52, 'Bánh tráng Thiện Huỳnh', '<p>Chuy&ecirc;n b&aacute;n c&aacute;c loại b&aacute;nh tr&aacute;ng, m&oacute;n ăn vặt ở Tr&agrave; Vinh bao gồm cả m&oacute;n b&aacute;nh tr&aacute;ng Tr&agrave; Vi nổi tiếng gần xa. B&aacute;nh tr&aacute;ng Tr&agrave; Vi cũng được d&ugrave;ng để chế biến th&agrave;nh c&aacute;c m&oacute;n ăn vặt kh&aacute;c g&oacute;p phần tăng th&ecirc;m hương vị, k&iacute;ch th&iacute;ch vị gi&aacute;c.</p>\r\n', '163 Nguyễn Thị Minh Khai, Phường 7, Trà Vinh', '07:00:00', 20, '22:00:00', 'thienhuynh.jpg', '0925590189'),
 (56, 'Nguyên Minh Trí', '<p>Chuy&ecirc;n b&aacute;n tất cả c&aacute;c loại b&aacute;nh m&igrave;, với đa dạng h&igrave;nh d&aacute;ng, k&iacute;ch thước, hương vị. Gi&uacute;p cho người mua c&oacute; thể c&oacute; th&ecirc;m sự lựa chọn.</p>\r\n', 'Hoà Lợi, Châu Thành, Trà Vinh', '06:00:00', 22, '23:00:00', 'minhtri.jpg', '0967005013'),
 (57, 'Long Bình 2', '<p>Được xem như một trong những m&oacute;n ăn đặc sản miền T&acirc;y Nam Bộ n&oacute;i ri&ecirc;ng, cũng như đặc sản ẩm thực Việt Nam n&oacute;i chung, m&oacute;n b&aacute;nh x&egrave;o từ l&acirc;u đ&atilde; nhận được sự ưa chuộng, y&ecirc;u th&iacute;ch từ thực kh&aacute;ch mọi miền tr&ecirc;n đất nước, cũng như bạn b&egrave; quốc tế.</p>\r\n', ' Mậu Thân, Phường 6, Trà Vinh', '09:00:00', 23, '21:00:00', 'longbinh.jpg', '0939946116'),
-(58, 'Chợ tỉnh Trà Vinh', '<p>Đ&acirc;y l&agrave; chợ đầu mối của cả th&agrave;nh phố, người đến mua h&agrave;ng v&agrave; c&aacute;c tiểu thương rất đ&ocirc;ng. C&aacute;c mặt h&agrave;ng b&aacute;n tại chợ rất đa dạng từ n&ocirc;ng sản đến quần &aacute;o, đồ gia dụng,&hellip; Khi tới đ&acirc;y du kh&aacute;ch c&oacute; thể t&igrave;m thấy một số sản vật địa phương c&oacute; thể mua về l&agrave;m qu&agrave; cho người th&acirc;n v&agrave; gia đ&igrave;nh. Đặc biệt người b&aacute;n h&agrave;ng tại chợ rất th&acirc;n thiện, dễ thương n&ecirc;n du kh&aacute;ch ho&agrave;n to&agrave;n y&ecirc;n t&acirc;m khi tới đ&acirc;y mua đồ.&nbsp;</p>\r\n', 'Điện Biên Phủ, phường 3, Trà Vinh.', '05:00:00', 24, '22:00:00', 'cho.jpg', '');
+(58, 'Chợ tỉnh Trà Vinh', '<p>Đ&acirc;y l&agrave; chợ đầu mối của cả th&agrave;nh phố, người đến mua h&agrave;ng v&agrave; c&aacute;c tiểu thương rất đ&ocirc;ng. C&aacute;c mặt h&agrave;ng b&aacute;n tại chợ rất đa dạng từ n&ocirc;ng sản đến quần &aacute;o, đồ gia dụng,&hellip; Khi tới đ&acirc;y du kh&aacute;ch c&oacute; thể t&igrave;m thấy một số sản vật địa phương c&oacute; thể mua về l&agrave;m qu&agrave; cho người th&acirc;n v&agrave; gia đ&igrave;nh. Đặc biệt người b&aacute;n h&agrave;ng tại chợ rất th&acirc;n thiện, dễ thương n&ecirc;n du kh&aacute;ch ho&agrave;n to&agrave;n y&ecirc;n t&acirc;m khi tới đ&acirc;y mua đồ.&nbsp;</p>\r\n', 'Điện Biên Phủ, phường 3, Trà Vinh.', '05:00:00', 24, '22:00:00', 'cho.jpg', ''),
+(59, 'Ẩm thực Sao Biển', '<p>Nh&agrave; h&agrave;ng c&oacute; kh&ocirc;ng gian tho&aacute;ng m&aacute;t, rộng r&atilde;i chuy&ecirc;n phục vụ c&aacute;c m&oacute;n ăn được chế biến đa dạng đ&aacute;p ứng nhu cầu thưởng thức ẩm thực của mỗi thực kh&aacute;ch. Tại đ&acirc;y thực kh&aacute;ch c&oacute; thể c&oacute; cơ hội thưởng thức c&aacute;c m&oacute;n ăn đặc trưng nổi tiếng được chế biến một c&aacute;ch độc đ&aacute;o v&agrave; mang hương vị đặc biệt.</p>\r\n', 'Trường Long Hoà, Duyên Hải, Trà Vinh.', '06:00:00', 25, '23:00:00', 'saobien.png', '0947433666'),
+(60, 'Cháo cá 64', '<p>Ch&aacute;o c&aacute; khoai Tr&agrave; Vinh l&agrave; một m&oacute;n ăn gi&agrave;u dinh dưỡng với c&aacute;c th&agrave;nh phần ch&iacute;nh như c&aacute;, gạo nếp v&agrave; rau củ. C&aacute; l&agrave; nguồn cung cấp protein v&agrave; axit b&eacute;o omega-3, gi&uacute;p tăng cường sức khỏe tim mạch v&agrave; hệ miễn dịch. Gạo nếp cũng l&agrave; nguồn cung cấp carbohydrate v&agrave; chất xơ, gi&uacute;p duy tr&igrave; năng lượng v&agrave; hỗ trợ ti&ecirc;u h&oacute;a. Rau củ cung cấp nhiều vitamin v&agrave; kho&aacute;ng chất, gi&uacute;p c&acirc;n bằng dinh dưỡng v&agrave; tăng cường sức đề kh&aacute;ng.</p>\r\n', '64 Điện Biên Phủ, Phường 6, Trà Vinh', '06:00:00', 26, '18:00:00', '64.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -129,7 +131,9 @@ INSERT INTO `hinh_anh` (`id`, `hinh_anh`, `mon_an_id`) VALUES
 (22, 'trang.jpg', 20),
 (24, 'banhmi.jpg', 22),
 (25, 'xeo.jpg', 23),
-(27, 'mambohoc.jpg', 24);
+(27, 'mambohoc.jpg', 24),
+(28, 'loichoi.jpg', 25),
+(29, 'chaoca.jpg', 26);
 
 -- --------------------------------------------------------
 
@@ -170,7 +174,9 @@ INSERT INTO `mon_an` (`id`, `ten_mon_an`, `gia_ban`, `mo_ta`, `danh_muc_id`) VAL
 (20, 'Bánh Tráng Trà Vi', '6.000 đồng / cái', '<p>Chắc hẳn nhiều người đ&atilde; qu&aacute; quen thuộc với c&aacute;c m&oacute;n ăn được chế biến kết hợp với b&aacute;nh tr&aacute;ng bởi ở bất cứ đ&acirc;u m&oacute;n b&aacute;nh n&agrave;y đều được ưa chuộng. B&aacute;nh Tr&aacute;ng Tr&agrave; Vinh c&oacute; nguồn g&oacute;c từ l&agrave;ng nghề l&agrave;m b&aacute;nh nổi tiếng ở x&oacute;m Tr&agrave; Vi với hơn 70 hộ gia đ&igrave;nh sống bằng nghề l&agrave;m b&aacute;nh tr&aacute;ng.</p>\r\n\r\n<p>B&aacute;nh Tr&aacute;ng Tr&agrave; Vi chủ yếu l&agrave;m bằng gạo trắng, b&aacute;nh được l&agrave;m theo phương ph&aacute;p thủ c&ocirc;ng n&ecirc;n c&oacute; m&agrave;u hơi ng&agrave;, mỏng, ngon, dẻo. B&aacute;nh tr&aacute;ng Tr&agrave; Vi c&oacute; mặt trong bữa ăn của người d&acirc;n Tr&agrave; Vinh v&agrave; c&aacute;c tỉnh th&agrave;nh kh&aacute;c, kh&ocirc;ng những thế b&aacute;nh tr&aacute;ng c&ograve;n c&oacute; mặt khắp c&aacute;c nh&agrave; h&agrave;ng, qu&aacute;n ăn lớn ở tr&ecirc;n to&agrave;n l&atilde;nh thổ Việt Nam.</p>\r\n\r\n<p>B&aacute;nh Tr&aacute;ng c&oacute; thể chế biến th&agrave;nh nhiều m&oacute;n ăn như: b&aacute;nh tr&aacute;ng cuốn thịt heo, b&aacute;nh tr&aacute;ng nướng, b&aacute;nh tr&aacute;ng trộn,...bảo đảm chỉ cần thưởng thức một lần l&agrave; bạn c&oacute; thể nhớ ngay đến hương vị của từng m&oacute;n b&aacute;nh tr&aacute;ng.</p>\r\n', 2),
 (22, 'Bánh Mì', '10.000 - 15.000 đồng', '<p>Kh&ocirc;ng c&ograve;n b&agrave;n c&atilde;i g&igrave; th&ecirc;m, b&aacute;nh m&igrave; ch&iacute;nh l&agrave; một trong những &quot;m&oacute;n ăn quốc d&acirc;n&quot; của người Việt Nam ch&uacute;ng ta từ rất l&acirc;u v&igrave; chứa đầy đủ chất dinh dưỡng lại rất dễ ăn. Tuỳ mỗi v&ugrave;ng miền kh&aacute;c nhau lại c&oacute; những phi&ecirc;n bản b&aacute;nh m&igrave; kh&aacute;c nhau, kh&ocirc;ng &iacute;t trong số đ&oacute; khiến người xứ kh&aacute;c ngạc nhi&ecirc;n.&nbsp;</p>\r\n', 1),
 (23, 'Bánh Xèo', '20.000 - 30.000 đồng', '<p>Hương vị d&acirc;n d&atilde;, đậm chất qu&ecirc; hương, b&aacute;nh to r&aacute;o dầu v&agrave; c&oacute; m&agrave;u v&agrave;ng rất dễ chịu. Vỏ b&aacute;nh gi&ograve;n rụm thơm ngon, nhiều nh&acirc;n. B&aacute;nh ăn c&ugrave;ng đĩa rau to, xanh mướt mơn mởn nh&igrave;n thật th&iacute;ch mắt. B&aacute;nh của qu&aacute;n c&oacute; hương vị beo b&eacute;o của nước dừa vị b&ugrave;i b&ugrave;i của đậu c&ugrave;ng vị gi&ograve;n ngọt của những gi&aacute;. C&ugrave;ng với nước mắm chua ngọt cộng th&ecirc;m rau sống c&aacute;c loại đ&atilde; tạo n&ecirc;n cho m&oacute;n b&aacute;nh một hương vị kh&aacute;c biệt.</p>\r\n\r\n<p>B&aacute;nh x&egrave;o được l&agrave;m từ bột gạo loại ngon, đổ thật mỏng trong chảo nh&ocirc;m, đốt tr&ecirc;n l&ograve; củi với nh&acirc;n l&agrave; gi&aacute; đỗ, thịt v&agrave; t&ocirc;m. B&aacute;nh chi&ecirc;n v&agrave;ng ươm được mang ra n&oacute;ng hổi, chấm với nước mắm chua ngọt được pha theo c&ocirc;ng thức đặc biệt của qu&aacute;n hấp dẫn du kh&aacute;ch ngay từ miếng đầu ti&ecirc;n.</p>\r\n', 1),
-(24, 'Mắm bò hóc', '100.000 - 150.000 đồng / 500g.', '<p>Mắm b&ograve; h&oacute;c, nghe t&ecirc;n th&ocirc;i cũng khiến nhiều du kh&aacute;ch cảm thấy sờ sợ rồi, thế nhưng khi nếm thử th&igrave; hẳn ai cũng sẽ gật g&ugrave; khen ngon. Mắm b&ograve; h&oacute;c mang hương vị ri&ecirc;ng, đậm đ&agrave; v&agrave; độc đ&aacute;o. Đặc biệt, mắm b&ograve; h&oacute;c c&oacute; thể ăn k&egrave;m với nhiều loại rau, thậm ch&iacute; l&agrave; xo&agrave;i xanh, c&oacute;c hay dưa leo,... nữa đấy.</p>\r\n', 4);
+(24, 'Mắm bò hóc', '100.000 - 150.000 đồng / 500g.', '<p>Mắm b&ograve; h&oacute;c, nghe t&ecirc;n th&ocirc;i cũng khiến nhiều du kh&aacute;ch cảm thấy sờ sợ rồi, thế nhưng khi nếm thử th&igrave; hẳn ai cũng sẽ gật g&ugrave; khen ngon. Mắm b&ograve; h&oacute;c mang hương vị ri&ecirc;ng, đậm đ&agrave; v&agrave; độc đ&aacute;o. Đặc biệt, mắm b&ograve; h&oacute;c c&oacute; thể ăn k&egrave;m với nhiều loại rau, thậm ch&iacute; l&agrave; xo&agrave;i xanh, c&oacute;c hay dưa leo,... nữa đấy.</p>\r\n', 4),
+(25, 'Loi Choi Sả Ớt', '100.000 - 150.000 đồng / phần', '<p>M&oacute;n ăn với c&aacute;i t&ecirc;n độc lạ, loi choi thường sinh sống tại v&ugrave;ng đất b&ugrave;n ven s&ocirc;ng hoặc b&atilde;i bồi, đất mới nổi. Ch&uacute;ng thường c&oacute; h&igrave;nh d&aacute;ng thẳng v&agrave; d&agrave;i khoảng hơn 20cm, th&acirc;n tr&ograve;n, m&agrave;u trắng. Sau khi loi choi được bắt l&ecirc;n sẽ đem đi phơi kh&ocirc;, nướng sơ qua lửa than để c&oacute; độ gi&ograve;n, vị b&ugrave;i v&agrave; thơm phức hấp dẫn.</p>\r\n', 4),
+(26, 'Cháo Cá Khoai', '20.000 - 25.000 đồng / phần.', '<p>Ch&aacute;o c&aacute; khoai với hương vị ngọt thơm của thịt c&aacute;, kết hợp với ch&aacute;o mềm khiến cho m&oacute;n ăn trở n&ecirc;n hấp dẫn hơn bao giờ hết. Để ch&aacute;o ngon hơn, bạn c&oacute; thể ăn k&egrave;m với rau mồng tơi, gi&aacute; hoặc một số rau t&ugrave;y th&iacute;ch của mỗi người.</p>\r\n', 1);
 
 -- --------------------------------------------------------
 
@@ -255,7 +261,14 @@ INSERT INTO `nguyen_lieu` (`id`, `ten_nguyen_lieu`, `mon_an_id`) VALUES
 (45, 'Thịt heo', 23),
 (46, 'Giá', 23),
 (47, 'Cá nước ngọt', 24),
-(48, 'Gia vị (đường, tiêu, tỏi, ớt,...)', 24);
+(48, 'Gia vị (đường, tiêu, tỏi, ớt,...)', 24),
+(49, 'Cá loi choi', 25),
+(50, 'Sả ', 25),
+(51, 'Ớt', 25),
+(52, 'Gạo tẻ', 26),
+(53, 'Cá khoai', 26),
+(54, 'Rau đắng', 26),
+(55, 'Nấm rơm', 26);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -316,19 +329,19 @@ ALTER TABLE `danh_muc_mon_an`
 -- AUTO_INCREMENT cho bảng `diem_phuc_vu`
 --
 ALTER TABLE `diem_phuc_vu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT cho bảng `hinh_anh`
 --
 ALTER TABLE `hinh_anh`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `mon_an`
 --
 ALTER TABLE `mon_an`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `nguoi_dung`
@@ -340,7 +353,7 @@ ALTER TABLE `nguoi_dung`
 -- AUTO_INCREMENT cho bảng `nguyen_lieu`
 --
 ALTER TABLE `nguyen_lieu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
