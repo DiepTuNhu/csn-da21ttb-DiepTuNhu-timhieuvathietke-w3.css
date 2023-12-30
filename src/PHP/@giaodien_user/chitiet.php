@@ -105,7 +105,7 @@ if(isset($_GET["idmonan"]))
               </div>
               <div class="w3-col s8">
                 <div class=" w3-left" style = "padding-left:30px;">
-                  <h3 style="font-weight: bolder; line-height:1.5">Nguyên liệu chính:</h3>
+                  <p style="font-weight: bolder; line-height:1.5"><b>Nguyên liệu chính:</b></p>
                   <ul type = "square">    
                   <?php
                     $sqlNguyenLieu = "SELECT ten_nguyen_lieu FROM nguyen_lieu WHERE mon_an_id=$mamonan";
@@ -115,6 +115,7 @@ if(isset($_GET["idmonan"]))
                     }
                   ?>               
                   </ul>
+                  <p style="text-align:justify;"><b>Tầm giá tham khảo </b><?php echo $row["gia_ban"];?></p>
                 </div>
               </div>
               <div class="w3-col ">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 30, 2023 lúc 03:18 AM
+-- Thời gian đã tạo: Th12 30, 2023 lúc 01:02 PM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 7.4.33
 
@@ -197,7 +197,9 @@ CREATE TABLE `nguoi_dung` (
 --
 
 INSERT INTO `nguoi_dung` (`id`, `ten_dang_nhap`, `mat_khau`, `email`, `dia_chi`) VALUES
-(1, 'tunhu', '202cb962ac59075b964b07152d234b70', 'dieptunhu2003@gmail.com', 'Ấp Ô Đùng, Hiếu Tử, Tiểu Cần, Trà Vinh');
+(1, 'tunhu', '202cb962ac59075b964b07152d234b70', 'dieptunhu2003@gmail.com', 'Tiểu Cần, Trà Vinh'),
+(2, 'vodiem', '202cb962ac59075b964b07152d234b70', 'vodiem@gmail.com', 'Trà Vinh'),
+(3, 'trungnghia', '202cb962ac59075b964b07152d234b70', 'trungnghia@gmail.com', 'Trà Vinh');
 
 -- --------------------------------------------------------
 
@@ -335,7 +337,7 @@ ALTER TABLE `diem_phuc_vu`
 -- AUTO_INCREMENT cho bảng `hinh_anh`
 --
 ALTER TABLE `hinh_anh`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `mon_an`
@@ -347,7 +349,7 @@ ALTER TABLE `mon_an`
 -- AUTO_INCREMENT cho bảng `nguoi_dung`
 --
 ALTER TABLE `nguoi_dung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `nguyen_lieu`

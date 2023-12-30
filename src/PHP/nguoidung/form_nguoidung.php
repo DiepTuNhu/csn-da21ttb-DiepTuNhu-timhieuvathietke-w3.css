@@ -18,7 +18,7 @@
       </div>
       <div class="mb-3 mt-3">
         <label for="diachi">Địa chỉ:</label>
-        <input type="text" class="form-control" id="diachi" placeholder="Nhập địa chỉ quán" name="diachi" required>
+        <input type="text" class="form-control" id="diachi" placeholder="Nhập địa chỉ" name="diachi" required>
       </div>   
       <button type="submit" class="btn btn-primary" name = "sbThem">Thêm mới</button>
     </form>
