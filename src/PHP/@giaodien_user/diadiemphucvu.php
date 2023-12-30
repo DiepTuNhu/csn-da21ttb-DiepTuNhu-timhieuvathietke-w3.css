@@ -26,7 +26,7 @@
                       echo '<img src="../../images/' . $row['hinh_anh'] . '" alt="' . $row['ten_quan'] . '" style="width:100%">';
                       echo '<div class="w3-container w3-justify">';
                         echo '<h4 class = "w3-center" style = "font-weight:bolder;">' . $row['ten_quan'] . '</h4>';
-                        echo '<p class ="w3-panel">' . $row['gioi_thieu_chung'] . '</p>';
+                        echo '<p class ="w3-justify">' . $row['gioi_thieu_chung'] . '</p>';
                       echo '</div>';
                     echo '</div>';
                   echo '</a>';
