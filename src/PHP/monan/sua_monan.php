@@ -41,7 +41,7 @@
   }
 ?>
 <div class="container">
-  <h2 class="w3-center w3-padding-16">Sửa món ăn</h2>
+  <h2 class="w3-center w3-padding-16">Cập nhật món ăn</h2>
   <form action="./sua_monan.php" method = "post">
     <div class="mb-3 mt-3">
       <label for="id">Mã món ăn:</label>
