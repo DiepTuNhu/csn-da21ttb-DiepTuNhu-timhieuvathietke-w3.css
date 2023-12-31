@@ -22,7 +22,7 @@
               while ($row = $result->fetch_assoc()) {
                 echo '<div class="w3-quarter card_monan" style="margin-bottom: 50px;">';
                   echo '<a href="chitiet_diadiem.php?iddiadiem='.$row["id"].'">';
-                    echo '<div class="w3-card-4 w3-white two-line-limit">';
+                    echo '<div class="w3-card-4 w3-white two-line-limit w3-round-large">';
                       echo '<img src="../../images/' . $row['hinh_anh'] . '" alt="' . $row['ten_quan'] . '" style="width:100%">';
                       echo '<div class="w3-container w3-justify">';
                         echo '<h4 class = "w3-center" style = "font-weight:bolder;">' . $row['ten_quan'] . '</h4>';
